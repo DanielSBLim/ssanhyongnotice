@@ -1,0 +1,8 @@
+	Frame objFrame = new Frame() {
+		@Override
+		public void paint(Graphics g) {
+			g.drawString(mouseFollow, getMouseMotionX, getMouseMotionY);
+		}
+	};
+1. 상속되지 않는 abstract(추상화) class를 이용할때 사용,
+2. 이너클래스를 동작한다.

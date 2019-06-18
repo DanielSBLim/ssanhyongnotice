@@ -1,0 +1,3 @@
+instanceof 
+매개변수 타입확인하는 메소드
+https://improver.tistory.com/140

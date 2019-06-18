@@ -1,0 +1,17 @@
+레이아웃을 관리하는 인터페이스는 LayoutManager가 있으며
+현재 우리가 잘 사용할 레이아웃타입은
+FlowLayout
+GridLayout
+BoraderLayout 등 3가지이다
+
+FlowLayout은
+왼쪽에서 오른쪽으로 배치가 되는 레이아웃이며 배치가 끝나면
+ 다음줄로 기입된다.
+
+GridLayout은
+큰 레이아웃을 칸으로 나누워서 해당위치를 기입하는 방식이다.
+
+BoraderLayout 
+같이 동봉된 사진과 같이 레이아웃이 표현되어있다.
+또한 "기본 Frame은 BoraderLayout" 되어있다.
+

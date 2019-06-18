@@ -1,0 +1,4 @@
+Clinent ---> server [Component] <----contaniner
+         <---
+
+컴포넛트안에 컨테이너가 있다.
