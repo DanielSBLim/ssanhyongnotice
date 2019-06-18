@@ -40,3 +40,24 @@ SQL 조작 명령어
    --show pagesize(페이지세팅 상황)
    --set linesize(라인 세팅 변경)
 	--show pagesize(페이지 세팅 변경)
+	
+※ tab 이라는 테이블은 모든 정보가 들어가는 테이블	
+	
+------------------------------------------------
+ALL_USERS 에서 임의의 아이디를 가져와서 접속
+------------------------------------------------
+1. sysDBA를 접속한다.
+2. select * from ALL_USERS 를 접속해서 아이디확인
+3. 난 그중에 hr를 채택
+4. alter user hr account unlock; 를 입력
+ (접속 제안을 푼다.)
+5. hr의 비번을 재설정한다
+ -  alter user hr identified by happyday
+6. hr 접속 하면 완료
+
+	
+	
+
+	
+	
+	
