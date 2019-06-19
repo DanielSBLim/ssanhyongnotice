@@ -23,7 +23,9 @@ SQL 조작 명령어
  DDL 객체 조작
  alter
   - alter "user hr" "account unlock";
+  	-> id의 접속 제한풀기
   - alter "user hr" "identified by happyday";
+  	 -> id의 pw를 변경
  Drop 
  Create
  
@@ -69,10 +71,6 @@ SQL 조작 명령어
 	 -> (페이지 세팅 변경)
 	-- desc "테이블명"
 	    -> 테이블의 칼럼 확인 
-	-- alter user "id" account unlock
-	    -> id의 접속 제한풀기
-	-- alter user "id" identified by "pw"
-	    -> id의 pw를 변경
 	    
 	-- ed (문장하나 버퍼 저장)
 	    -> 전에 입력값이 하나의 문장으로만 출력
@@ -91,7 +89,7 @@ SQL 조작 명령어
 		
 ※ tab 이라는 테이블은 모든 정보가 볼수있는 내역
 ※ 다음 경로가 system 계정 기본값
- oraclexe\app\oracle\product\11.2.0\server\sqlplus\admin
+	oraclexe\app\oracle\product\11.2.0\server\sqlplus\admin
  
 ------------------------------------------------
 테이블 은 크게 두가지로 나눈다.
