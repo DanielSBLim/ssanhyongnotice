@@ -1,0 +1,8 @@
+﻿
+SQL> desc REGIONS;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REGION_ID                                 NOT NULL NUMBER
+ REGION_NAME                                        VARCHAR2(25)
+
+SQL>
