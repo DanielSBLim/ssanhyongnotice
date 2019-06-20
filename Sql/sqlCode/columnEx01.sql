@@ -1,0 +1,4 @@
+column FIRST_NAME Format a15;
+column LAST_NAME Format a15;
+column SALARY Format 999,999;
+select EMPLOYEE_ID,FIRST_NAME,LAST_NAME,SALARY from EMPLOYEES;

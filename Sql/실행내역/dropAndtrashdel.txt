@@ -1,0 +1,64 @@
+-------------------------------------------------
+기존 테이블  drop 제거
+-------------------------------------------------
+
+
+SQL> drop Table MENT01;
+
+Table dropped.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+BIN$ghOXVa5xTWqIR2u93D0Ntw==$0                               TABLE
+COUNTRIES                                                    TABLE
+DEPARTMENTS                                                  TABLE
+EMPLOYEES                                                    TABLE
+EMP_DETAILS_VIEW                                             VIEW
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+REGIONS                                                      TABLE
+
+9 rows selected.
+
+
+
+
+-------------------------------------------------
+쓰레기값 drop  제거가 안됨
+-------------------------------------------------
+
+
+SQL> drop Table "BIN$ghOXVa5xTWqIR2u93D0Ntw==$0";
+drop Table "BIN$ghOXVa5xTWqIR2u93D0Ntw==$0"
+           *
+ERROR at line 1:
+ORA-38301: can not perform DDL/DML over objects in Recycle Bin
+
+-------------------------------------------------
+쓰레기값 제거
+-------------------------------------------------
+
+SQL> purge recyclebin;
+
+Recyclebin purged.
+
+SQL> select * from tab;
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+COUNTRIES                                                    TABLE
+DEPARTMENTS                                                  TABLE
+EMPLOYEES                                                    TABLE
+EMP_DETAILS_VIEW                                             VIEW
+JOBS                                                         TABLE
+JOB_HISTORY                                                  TABLE
+LOCATIONS                                                    TABLE
+MENT01                                                       TABLE
+REGIONS                                                      TABLE
+
+9 rows selected.
+
+SQL>

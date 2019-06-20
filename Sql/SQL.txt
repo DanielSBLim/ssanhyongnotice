@@ -1,8 +1,14 @@
+https://www.w3schools.com/sql/sql_update.asp
+
 -------------------------------------------------------------------------
 SQL 조작 명령어  
 --------------------------------------------------------------------------
+ -----------------------------
  DQL 
+ -----------------------------
+ -----------------------------
  select
+ ----------------------------
 	- select * from "해당 테이블"
   	- select "", "", "", 
   		-> 여러가지의 컬럼을 한번에 출력이 가능하다.
@@ -12,28 +18,82 @@ SQL 조작 명령어
 		-> 기존 출력 내역에 조건(where)을 넣고 조건문을 입력 (DEPARTMENT_ID = 50) 
 	- 논리 연산은 
 	 not, or , and가 있다.
+	- 정렬(order by) order by "컬럼" "정렬계수";
+		-> 오른차수 : ASC
+		-> 내림차수 : DESC
+	- IS NULL Syntax
+		-> SELECT column_names
+		   FROM table_name
+		   WHERE column_name IS NULL;
+	- IS NOT NULL Syntax
+		-> SELECT column_names
+		   FROM table_name
+		   WHERE column_name IS NOT NULL;
 	
 
- 
+-----------------------------------------------
  DML Recode 조작
+-----------------------------------------------
+
+------------------------------
  insert 
+------------------------------
+1. 갯수 만큼
+INSERT INTO table_name values (column1, column2, column3, ...)
+2. 테이을 컬럼 기술 순서 (개수)에 맞게 삽입
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
+------------------------------
  delete 
+------------------------------
+	1. DELETE FROM table_name WHERE condition;
+------------------------------ 
  update 
- 
+------------------------------
+	1. UPDATE table_name
+		SET column1 = value1, column2 = value2, ...
+		WHERE condition;
+		-> WHERE condition 
+			--> 레코드 유지 할라면 where 사용 권장
+			--> 없으면 모든레코드가 전부 변경
+			
+		UPDATE ment01 set MEN_ADDR = '합정' WHERE MEN_NAME = '포도';
+
+ --------------------------
  DDL 객체 조작
+ ---------------------------
  alter
   - alter "user hr" "account unlock";
   	-> id의 접속 제한풀기
   - alter "user hr" "identified by happyday";
   	 -> id의 pw를 변경
- Drop 
+ Drop  
+   - drop Table MENT01;
+   - 쓰레기 값은 드롭으로 제거가 안된단
+
+   
+ ------------------------------
  Create
+ ------------------------------
+ 	->  Create Table menT01 (
+    men_id varchar2(20),
+     men_pwd varchar2(20),
+     men_name varchar2(20),
+     men_email varchar2(30),
+     men_phone varchar2(20),
+     men_addr varchar2(20)
+    ); 
+    	- 내부의 컬럼 추가하기.
  
+ ------------------------------	
  DCL
+ ------------------------------
  revoke
  Grant
  
+ ------------------------------
  TCL
+ ------------------------------
  COMMIT
  Rollback
  SavePoint
@@ -65,15 +125,16 @@ SQL 조작 명령어
 		-> 최상의 권한으로 변경할땐 
 	--show linesize(라인 세팅 상항)
  	--show pagesize(페이지세팅 상황)
-	--set linesize "바꿀사이즈"
+	--set linesize "바꿀사이즈";
 	 ->(라인 세팅 변경)
-	--show pagesize "바꿀사이즈"
+	--set pagesize "바꿀사이즈";
 	 -> (페이지 세팅 변경)
 	-- desc "테이블명"
-	    -> 테이블의 칼럼 확인 
+	    -> 테이블의 칼럼 확인 (내림차수)
 	    
 	-- ed (문장하나 버퍼 저장)
 	    -> 전에 입력값이 하나의 문장으로만 출력
+	    -> 마지막의 / 의미는 세미클론의 의미	
 	     -> 저장 종료후
 	       1. / 
 	       	 텍스트의 입력된 값 결과 출력
@@ -85,11 +146,20 @@ SQL 조작 명령어
 		
 	--  @ "경로"
 		-> 해당 sql 파일 실행
+	-- spool "파일위치"
+		화면 캡쳐
+	
+	- 지운 테이블 지우기
+		-> purge recyclebin
+	 
+		
 		
 		
 ※ tab 이라는 테이블은 모든 정보가 볼수있는 내역
 ※ 다음 경로가 system 계정 기본값
 	oraclexe\app\oracle\product\11.2.0\server\sqlplus\admin
+※ 인코딩 타입은 ansi로 해야한다
+	1990년대의 개발된것으로 옛날것을 채택했다.
  
 ------------------------------------------------
 테이블 은 크게 두가지로 나눈다.

@@ -1,0 +1,47 @@
+MEN_ID                                   MEN_PWD                                  MEN_NAME
+---------------------------------------- ---------------------------------------- ----------------------------------------
+MEN_EMAIL                                                    MEN_PHONE                                MEN_ADDR
+------------------------------------------------------------ ---------------------------------------- ----------------------------------------
+red                                      1234                                     장미
+red@test.com                                                 02                                       신촌
+
+orange                                   1234                                     ？ㅻ젋吏？
+orange@test.com                                              02                                       ？띾？
+
+green                                    1234                                     ？λ？
+green@test.com                                               031                                      ？붿젙
+
+blue                                     1234                                     諛붾떎
+blue@test.com                                                02                                       ？묒븫
+
+orange                                   1234                                     ？ㅻ젋吏？
+orange@test.com                                              02                                       ？띾？
+
+green                                    1234                                     ？λ？
+green@test.com                                               031                                      ？붿젙
+
+blue                                     1234                                     諛붾떎
+blue@test.com                                                02                                       ？묒븫
+
+red                                      1234                                     장미
+red@test.com                                                 02                                       신촌
+
+orange                                   1234                                     오렌지
+orange@test.com                                              02                                       홍대
+
+yellow                                   1234                                     개나리
+yellow@test.com                                              02                                       망원
+
+green                                    1234                                     장미
+green@test.com                                               031                                      화정
+
+blue                                     1234                                     바다
+blue@test.com                                                02                                       응암
+
+purple                                   1234                                     포도
+
+
+
+13 rows selected.
+
+SQL>
