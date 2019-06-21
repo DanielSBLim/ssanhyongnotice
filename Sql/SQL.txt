@@ -93,8 +93,18 @@ VALUES ('Cardinal', 'Stavanger', 'Norway');
  ------------------------------	
  DCL
  ------------------------------
+ ------------------------------
  revoke
+ ------------------------------
+ revoke connect from scott;
+ - 접속 권한 해제	
+ ------------------------------
  Grant
+ ------------------------------
+ Grant connect to scott;	
+ - 접속 권한
+Grant DBA to scott;	
+ - DB 권한
  
  ------------------------------
  TCL
@@ -158,24 +168,44 @@ VALUES ('Cardinal', 'Stavanger', 'Norway');
 		-> purge recyclebin
 		
 	- SQL Constraints
-		-> 데이터의 규측을 주는것을 말한다.
+		-> 데이터의 규칙을 주는것을 말한다.
 		CREATE TABLE table_name (
     	column1 datatype constraint,
    		column2 datatype constraint,
    		column3 datatype constraint,
     	....
 		);
+		CONSTRAINT UC_Person UNIQUE (ID,LastName)
+		UC_Person = 제약 조건 (작성 내역 : 테이블명_필드_약어)
+		UNIQUE = 규칙
+		ID,LastName = 컬럼
+		제약조건은 admin에서 확인이 가능하다.
+		보는 방법 
+		select constraint_Name  from User_constraints;
+		
 		NOT NULL - Ensures that a column cannot have a NULL value
 		반드시 입력되어야한다.
+
 		UNIQUE - Ensures that all values in a column are different
 		모든 값 달라야한다 ex(주민등록번호)
+		------------------------------
 		PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
-		
+		 NOT NULL +  UNIQUE + PRIMARY KEY
+
 		FOREIGN KEY - Uniquely identifies a row/record in another table
-		
+		 다른 테이블과 연결 컬럼
+		------------------------------
 		CHECK - Ensures that all values in a column satisfies a specific condition
-		DEFAULT - Sets a default value for a column when no value is specified
+		모든 데이터 조건 필드 ex 성별[남자, 여자] 부서[영업, 인사, 재경]
+
+		DEFAULT(df) - Sets a default value for a column when no value is specified
+		값을 주지 않을때 실행되는 값  즉 기본값
+		
+		
 		INDEX - Used to create and retrieve data from the database very quickly
+		검색 데이터를 매우 빠르게 사용하기 위해서 이다
+		-> update, delect 잦은 컬럼에 느려질수도 있다.
+		
 		https://www.w3schools.com/sql/sql_constraints.asp
 		
 		
@@ -200,16 +230,33 @@ ALL_USERS 에서 임의의 아이디를 가져와서 접속
 3. 난 그중에 hr를 채택
 4. alter user hr account unlock; 를 입력
  (접속 제안을 푼다.)
-5. hr의 비번을 재설정한다
+5. hr의 비번을 재설정한다(변경)
  -  alter user hr identified by happyday;
 6. hr 접속 하면 완료
 
+-----------------------------------------------
+관리자 계정에서 할수 있는 내역
 ------------------------------------------------
+1. SYSTEM_PRIVILEGE_MAP 
+
 
 ------------------------------------------------
+계정 생성하기.
+------------------------------------------------
+1. 관리자 계정 접속
+2. 계정 생성 
+	Create user scott identified by niceday;
+3. 권한주기
+	Grant connect to scott;
+------------------------------------------------
+19/6/21 
+------------------------------------------------
+Soctt 계정 만들고
+table[dept, sawon, gogek] 만들고 
+DCL 사용해보기
+Grant, revoke
 
-	
 
-	
+
 	
 	
