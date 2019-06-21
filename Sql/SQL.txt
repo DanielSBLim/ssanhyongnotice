@@ -29,6 +29,11 @@ SQL 조작 명령어
 		-> SELECT column_names
 		   FROM table_name
 		   WHERE column_name IS NOT NULL;
+		   
+	- top, Limmit or Rownum Clause
+	 ==> number of recoder to return
+	 	-> Mysql : LIMMIT
+	 	-> Oracle : ROWNUM
 	
 
 -----------------------------------------------
@@ -151,8 +156,27 @@ VALUES ('Cardinal', 'Stavanger', 'Norway');
 	
 	- 지운 테이블 지우기
 		-> purge recyclebin
-	 
 		
+	- SQL Constraints
+		-> 데이터의 규측을 주는것을 말한다.
+		CREATE TABLE table_name (
+    	column1 datatype constraint,
+   		column2 datatype constraint,
+   		column3 datatype constraint,
+    	....
+		);
+		NOT NULL - Ensures that a column cannot have a NULL value
+		반드시 입력되어야한다.
+		UNIQUE - Ensures that all values in a column are different
+		모든 값 달라야한다 ex(주민등록번호)
+		PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+		
+		FOREIGN KEY - Uniquely identifies a row/record in another table
+		
+		CHECK - Ensures that all values in a column satisfies a specific condition
+		DEFAULT - Sets a default value for a column when no value is specified
+		INDEX - Used to create and retrieve data from the database very quickly
+		https://www.w3schools.com/sql/sql_constraints.asp
 		
 		
 ※ tab 이라는 테이블은 모든 정보가 볼수있는 내역

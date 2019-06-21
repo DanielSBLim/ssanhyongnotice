@@ -1,0 +1,147 @@
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select Rownum, EMPLOYEE_ID, FIRST_NAME, SALARY from EMPLOYEES
+SQL> /
+
+    ROWNUM EMPLOYEE_ID FIRST_NAME                                   SALARY
+---------- ----------- ---------------------------------------- ----------
+         1         100 Steven                                        24000
+         2         101 Neena                                         17000
+         3         102 Lex                                           17000
+         4         103 Alexander                                      9000
+         5         104 Bruce                                          6000
+         6         105 David                                          4800
+         7         106 Valli                                          4800
+         8         107 Diana                                          4200
+         9         108 Nancy                                         12008
+        10         109 Daniel                                         9000
+        11         110 John                                           8200
+        12         111 Ismael                                         7700
+        13         112 Jose Manuel                                    7800
+        14         113 Luis                                           6900
+        15         114 Den                                           11000
+        16         115 Alexander                                      3100
+        17         116 Shelli                                         2900
+        18         117 Sigal                                          2800
+        19         118 Guy                                            2600
+        20         119 Karen                                          2500
+        21         120 Matthew                                        8000
+        22         121 Adam                                           8200
+        23         122 Payam                                          7900
+        24         123 Shanta                                         6500
+        25         124 Kevin                                          5800
+        26         125 Julia                                          3200
+        27         126 Irene                                          2700
+        28         127 James                                          2400
+        29         128 Steven                                         2200
+        30         129 Laura                                          3300
+        31         130 Mozhe                                          2800
+        32         131 James                                          2500
+        33         132 TJ                                             2100
+        34         133 Jason                                          3300
+        35         134 Michael                                        2900
+        36         135 Ki                                             2400
+        37         136 Hazel                                          2200
+        38         137 Renske                                         3600
+        39         138 Stephen                                        3200
+        40         139 John                                           2700
+        41         140 Joshua                                         2500
+        42         141 Trenna                                         3500
+        43         142 Curtis                                         3100
+        44         143 Randall                                        2600
+        45         144 Peter                                          2500
+        46         145 John                                          14000
+        47         146 Karen                                         13500
+        48         147 Alberto                                       12000
+        49         148 Gerald                                        11000
+        50         149 Eleni                                         10500
+        51         150 Peter                                         10000
+        52         151 David                                          9500
+        53         152 Peter                                          9000
+        54         153 Christopher                                    8000
+        55         154 Nanette                                        7500
+        56         155 Oliver                                         7000
+        57         156 Janette                                       10000
+        58         157 Patrick                                        9500
+        59         158 Allan                                          9000
+        60         159 Lindsey                                        8000
+        61         160 Louise                                         7500
+        62         161 Sarath                                         7000
+        63         162 Clara                                         10500
+        64         163 Danielle                                       9500
+        65         164 Mattea                                         7200
+        66         165 David                                          6800
+        67         166 Sundar                                         6400
+        68         167 Amit                                           6200
+        69         168 Lisa                                          11500
+        70         169 Harrison                                      10000
+        71         170 Tayler                                         9600
+        72         171 William                                        7400
+        73         172 Elizabeth                                      7300
+        74         173 Sundita                                        6100
+        75         174 Ellen                                         11000
+        76         175 Alyssa                                         8800
+        77         176 Jonathon                                       8600
+
+    ROWNUM EMPLOYEE_ID FIRST_NAME                                   SALARY
+---------- ----------- ---------------------------------------- ----------
+        78         177 Jack                                           8400
+        79         178 Kimberely                                      7000
+        80         179 Charles                                        6200
+        81         180 Winston                                        3200
+        82         181 Jean                                           3100
+        83         182 Martha                                         2500
+        84         183 Girard                                         2800
+        85         184 Nandita                                        4200
+        86         185 Alexis                                         4100
+        87         186 Julia                                          3400
+        88         187 Anthony                                        3000
+        89         188 Kelly                                          3800
+        90         189 Jennifer                                       3600
+        91         190 Timothy                                        2900
+        92         191 Randall                                        2500
+        93         192 Sarah                                          4000
+        94         193 Britney                                        3900
+        95         194 Samuel                                         3200
+        96         195 Vance                                          2800
+        97         196 Alana                                          3100
+        98         197 Kevin                                          3000
+        99         198 Donald                                         2600
+       100         199 Douglas                                        2600
+       101         200 Jennifer                                       4400
+       102         201 Michael                                       13000
+       103         202 Pat                                            6000
+       104         203 Susan                                          6500
+       105         204 Hermann                                       10000
+       106         205 Shelley                                       12008
+       107         206 William                                        8300
+
+107 rows selected.
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select Rownum, EMPLOYEE_ID, FIRST_NAME, SALARY from EMPLOYEES where <= Rownum
+SQL> /
+select Rownum, EMPLOYEE_ID, FIRST_NAME, SALARY from EMPLOYEES where <= Rownum
+                                                                    *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select Rownum, EMPLOYEE_ID, FIRST_NAME, SALARY from EMPLOYEES where Rownum <= 5
+SQL> /
+
+    ROWNUM EMPLOYEE_ID FIRST_NAME                                   SALARY
+---------- ----------- ---------------------------------------- ----------
+         1         100 Steven                                        24000
+         2         101 Neena                                         17000
+         3         102 Lex                                           17000
+         4         103 Alexander                                      9000
+         5         104 Bruce                                          6000
+
+SQL>
