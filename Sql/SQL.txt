@@ -166,6 +166,8 @@ Grant DBA to scott;
 	
 	- 지운 테이블 지우기
 		-> purge recyclebin
+	- dual dms 연습용
+		
 		
 	- SQL Constraints
 		-> 데이터의 규칙을 주는것을 말한다.
@@ -193,7 +195,9 @@ Grant DBA to scott;
 		 NOT NULL +  UNIQUE + PRIMARY KEY
 
 		FOREIGN KEY - Uniquely identifies a row/record in another table
-		 다른 테이블과 연결 컬럼
+		 다른 테이블과 연결 컬럼 (외래키 에 외래키는 안됨)
+		CONSTRAINT sawon_samgr_fk  FOREIGN KEY (samgr) REFERENCES (sabun) 
+		 
 		------------------------------
 		CHECK - Ensures that all values in a column satisfies a specific condition
 		모든 데이터 조건 필드 ex 성별[남자, 여자] 부서[영업, 인사, 재경]
@@ -207,6 +211,10 @@ Grant DBA to scott;
 		-> update, delect 잦은 컬럼에 느려질수도 있다.
 		
 		https://www.w3schools.com/sql/sql_constraints.asp
+		
+		SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+			FROM Customers;
+			https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_alias_column2&ss=-1
 		
 		
 ※ tab 이라는 테이블은 모든 정보가 볼수있는 내역
