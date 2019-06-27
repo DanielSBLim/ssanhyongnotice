@@ -217,6 +217,15 @@ Grant DBA to scott;
 			https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_alias_column2&ss=-1
 		
 		
+		작성순서
+	SELECT column_name(s)
+	FROM table_name
+	WHERE condition
+	GROUP BY column_name(s) 구룹 설정
+	HAVING condition		구룹설정 조건
+	ORDER BY column_name(s) 정렬
+		
+		
 ※ tab 이라는 테이블은 모든 정보가 볼수있는 내역
 ※ 다음 경로가 system 계정 기본값
 	oraclexe\app\oracle\product\11.2.0\server\sqlplus\admin
